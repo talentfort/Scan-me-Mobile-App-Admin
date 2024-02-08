@@ -1,0 +1,42 @@
+
+.home{
+    display: flex;
+
+.sidebar {
+    position: fixed;
+   
+    height: 100%;
+    width: 200px; /* Adjust the width according to your design */
+    
+  }
+  
+
+    .homeContainer{
+        flex:6;
+
+        .widgets , .charts{
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .listContainer{
+            -webkit-box-shadow: -10px 10px 12px -7px rgba(0,0,0,0.33);
+            -moz-box-shadow: -10px 10px 12px -7px rgba(0,0,0,0.33);
+            box-shadow: -10px 10px 12px -7px rgba(0,0,0,0.33);
+             padding: 10px;
+             margin: 20px;
+
+             .listTitle{
+                font-weight: 500;
+                color: rgb(0, 9, 252);;
+                margin-bottom: 15px;
+
+                .title-H{
+                    color: rgb(0, 9, 252);
+                    margin-left: 200px;
+                }
+             }
+        }
+    }
+}

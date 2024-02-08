@@ -1,0 +1,160 @@
+
+.datatable{
+    height: 600px;
+    padding: 20px;
+
+    .datatableTitle{
+        width: 100%;
+        font-size: 25px;
+        color: gray;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+
+        .button-Find {
+            --primary-color: #645bff;
+            --secondary-color: #fff;
+            --hover-color: #111;
+            --arrow-width: 10px;
+            --arrow-stroke: 2px;
+            box-sizing: border-box;
+            border: 0;
+            border-radius: 20px;
+            color: var(--secondary-color);
+            padding: 1em 1.8em;
+            background: var(--primary-color);
+            display: flex;
+            transition: 0.2s background;
+            align-items: center;
+            gap: 0.6em;
+            font-weight: bold;
+          }
+          
+          .button-Find .arrow-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .button-Find .arrow {
+            margin-top: 1px;
+            width: var(--arrow-width);
+            background: var(--primary-color);
+            height: var(--arrow-stroke);
+            position: relative;
+            transition: 0.2s;
+          }
+          
+          .button-Find .arrow::before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            border: solid var(--secondary-color);
+            border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+            display: inline-block;
+            top: -3px;
+            right: 3px;
+            transition: 0.2s;
+            padding: 3px;
+            transform: rotate(-45deg);
+          }
+          
+          .button-Find:hover {
+            background-color: var(--hover-color);
+          }
+          
+          .button-Find:hover .arrow {
+            background: var(--secondary-color);
+          }
+          
+          .button-Find:hover .arrow:before {
+            right: 0;
+          }
+        
+        .input-f{
+            
+            border-radius: 10px;
+        }
+
+        .link{
+            text-decoration: none;
+            color: green;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+
+    .cellWidthImg{
+        display: flex;
+        align-items: center;
+
+        .cellImg{
+            width: 32px;
+            height: 32px;border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+    }
+
+    .cellWithStatus{
+        padding: 5px;
+        border-radius: 5px;
+
+        &.Active{
+            background-color: rgba(73, 253, 7, 0.348) ;
+            color: rgba(4, 225, 33, 0.986);
+            
+        }
+
+        &.Pending{
+            background-color: rgba(222, 251, 3, 0.419);
+            color: rgba(178, 194, 6, 0.996);
+        }
+
+        &.Inactive{
+            background-color:  rgba(255, 0, 0, 0.221);
+            color: crimson;
+        }
+    }
+
+    .cellAction{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+
+        .viewButton{
+            padding: 2px 5px;
+            border-radius: 5px ;
+            color: darkblue;
+            border: 1px solid darkblue;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darkblue;
+                color: white;
+              }
+
+        }
+
+        .deleteButton{
+            padding: 2px 5px;
+            border-radius: 5px ;
+            color: crimson;
+            border: 1px solid crimson;
+            cursor: pointer;
+
+            &:hover {
+                background-color: crimson;
+                color: white;
+              }
+
+        }
+    }
+}
